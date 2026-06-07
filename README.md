@@ -131,6 +131,7 @@ npm run build    # outputs dist/
 ## Links
 
 - **Demo:** [cinematic-demo.web.app](https://cinematic-demo.web.app)
+- **Wiki (ES/EN):** [wiki/Home.md](wiki/Home.md)
 - **Portfolio:** [proyectos-personales.web.app](https://proyectos-personales.web.app)
 - **LinkedIn:** [Mindset & Code](https://www.linkedin.com/company/mindset-code)
 - **Email:** contacto@mindset-code.com
