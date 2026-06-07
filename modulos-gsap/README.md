@@ -1,32 +1,29 @@
-# Pack de módulos cinematográficos GSAP
+# Pack de módulos cinematográficos
 
-Activo reutilizable del Cinematic Web Service. Los módulos viven implementados en
-`../plantillas/vite-gsap-starter/src/modules/` y se copian a cada proyecto cliente.
+Activo reutilizable del Cinematic Web Service. Implementados en
+`../plantillas/vite-gsap-starter/src/modules/`. Cada uno demuestra una técnica distinta.
 
-## Estado del pack
+## Estado del pack — 8/8 ✅
 
-| Módulo | Estado | Efecto |
-|---|---|---|
-| `HeroParallax` | ✅ hecho | Hero full-screen, capas en parallax al scroll, contenido que entra/sale |
-| `ScrollReveal` | ✅ hecho | Revela hijos con fade+slide al entrar en viewport (stagger configurable) |
-| `AccordionHover` | ✅ hecho | Galería de paneles que expanden al hover/focus (accesible por teclado) |
-| `SvgDraw` | ⬜ pendiente | Trazado de logo/líneas dibujándose (DrawSVGPlugin / strokeDashoffset) |
-| `PinnedSection` | ⬜ pendiente | Sección fijada mientras animan elementos internos |
-| `ImageSequence` | ⬜ pendiente | Secuencia de frames tipo vídeo en canvas (scrub) |
-| `CountUp` | ⬜ pendiente | Métricas que cuentan hacia arriba al entrar |
-| `Product3D` | ⬜ opcional | Objeto GLB rotando (React Three Fiber — tier Cinematic 3D) |
+| Módulo | Técnica que demuestra |
+|---|---|
+| `HeroParallax` | ScrollTrigger scrub, imagen de fondo en parallax, entrada/salida |
+| `ScrollReveal` | Reveal fade+slide al entrar en viewport (stagger) |
+| `AccordionHover` | Galería que expande al hover/focus (accesible), contextSafe |
+| `Scene3D` | **React Three Fiber** + drei + three.js + WebGL (esfera distort) |
+| `CountUp` | Interpolación numérica animada con ScrollTrigger |
+| `SvgDraw` | Trazado de paths SVG (strokeDashoffset, sin plugin de pago) |
+| `HorizontalScroll` | Pin + scroll vertical→horizontal (técnica avanzada) |
+| `MagneticButton` | Micro-interacción de puntero con contextSafe + cleanup |
 
-**v1 lista para vender: 3/8 módulos.** Suficiente para una landing premium completa
-(hero + secciones reveladas + galería interactiva). El resto se añade bajo demanda.
+Demo viva que los exhibe todos: **https://cinematic-demo.web.app**
 
 ## Convención de un módulo
+- Componente React autocontenido, `useGSAP()` con scope (cleanup automático).
+- Props vía JSDoc + ejemplo de uso en cabecera.
+- Sin marca hardcodeada: color/tipografía desde las CSS vars de `brand.js`.
 
-- Componente React autocontenido en `src/modules/<Nombre>.jsx`.
-- `useGSAP()` de `@gsap/react` con `scope` → cleanup automático.
-- Props tipadas vía JSDoc + ejemplo de uso en el encabezado del archivo.
-- Sin estado de marca dentro: el color/tipografía viene de las CSS vars de `brand.js`.
-
-## Verificado
-
-Build de producción OK (`npm run build`, 94 KB gzip). Demo validada visualmente:
-hero SOLARA + galería accordion funcionando (capturas en sesión 2026-06-07).
+## Notas técnicas
+- **3D robusto sin GPU:** `Scene3D` usa `emissive` + `preserveDrawingBuffer` para
+  renderizar bien también con SwiftShader (usuarios sin GPU) y ser capturable en previews.
+- **Peso:** three.js añade ~340 KB gzip. Para una landing sin 3D, omitir Scene3D baja a ~95 KB.
