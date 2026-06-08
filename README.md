@@ -65,7 +65,6 @@ npm run build    # genera dist/
 
 ```
 cinematic-web-service/
-├── PLAYBOOK.md                  # pipeline, oferta, precios, checklist
 ├── modulos-gsap/README.md       # los 8 módulos y qué técnica demuestra cada uno
 └── plantillas/
     └── vite-gsap-starter/       # starter + demo desplegable
