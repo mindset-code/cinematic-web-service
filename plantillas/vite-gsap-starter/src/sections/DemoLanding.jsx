@@ -135,7 +135,10 @@ export default function DemoLanding() {
 
       <footer className="foot">
         <span>{brand.name}</span>
-        <span>Cinematic Web Service · React + GSAP + R3F · Mindset & Code</span>
+        {/* La firma del pie es la del despacho: esta demo se enseña desde
+            mindset-code.com/es/codigo/web-cinematica y ahi quien responde del
+            trabajo es Mindset & Code. */}
+        <span>Cinematic Web Service · React + GSAP + R3F · Mindset &amp; Code</span>
       </footer>
     </main>
   );
