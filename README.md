@@ -131,10 +131,10 @@ npm run build    # outputs dist/
 
 - **Demo:** [cinematic-demo.web.app](https://cinematic-demo.web.app)
 - **Wiki (ES/EN):** [wiki/Home.md](wiki/Home.md)
-- **Portfolio:** [proyectos-personales.web.app](https://proyectos-personales.web.app)
-- **LinkedIn:** [Mindset & Code](https://www.linkedin.com/company/mindset-code)
+- **Portfolio:** [proyectos-mindset-code.web.app](https://proyectos-mindset-code.web.app)
+- **Web:** [mindset-code.com](https://mindset-code.com/es)
 - **Email:** contacto@mindset-code.com
 
 ---
 
-*Built by [Mindset & Code](https://github.com/mindset-code) · Data & BI Analyst · MBA · ISC2 CC*
+*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*
