@@ -137,4 +137,6 @@ npm run build    # outputs dist/
 
 ---
 
+**Ficha del proyecto:** [Web cinemática en mindset-code.com](https://mindset-code.com/es/codigo/web-cinematica) — qué problema resuelve, para quién y con qué está construido.
+
 *Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*
