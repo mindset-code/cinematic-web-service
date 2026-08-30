@@ -1,0 +1,45 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Lo que este repositorio ofrece es la plantilla de plantillas/vite-gsap-starter.
+# Si la plantilla no compila, lo que se ofrece no existe: eso es lo que compila
+# este flujo, y no el repositorio, que por lo demas es documentacion.
+
+jobs:
+  plantilla:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plantillas/vite-gsap-starter
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["20", "22"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: plantillas/vite-gsap-starter/package-lock.json
+
+      - name: Instalar exactamente lo que fija el lockfile
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Compilar
+        run: npm run build
+
+      - name: Comprobar que la compilacion ha producido algo
+        run: |
+          test -d dist || { echo "no hay carpeta dist"; exit 1; }
+          test -f dist/index.html || { echo "dist sin index.html"; exit 1; }
+          echo "dist: $(find dist -type f | wc -l) ficheros"
