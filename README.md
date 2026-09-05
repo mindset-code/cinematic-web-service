@@ -132,11 +132,11 @@ npm run build    # outputs dist/
 - **Demo:** [cinematic-demo.web.app](https://cinematic-demo.web.app)
 - **Wiki (ES/EN):** [wiki/Home.md](wiki/Home.md)
 - **Portfolio:** [proyectos-mindset-code.web.app](https://proyectos-mindset-code.web.app)
-- **Web:** [mindset-code.com](https://mindset-code.com/es)
+- **Web:** [mindset-code.com](https://mindset-code.com)
 - **Email:** contacto@mindset-code.com
 
 ---
 
-**Ficha del proyecto:** [Web cinemática en mindset-code.com](https://mindset-code.com/es/codigo/web-cinematica) — qué problema resuelve, para quién y con qué está construido.
+**Ficha del proyecto:** [Web cinemática en mindset-code.com](https://mindset-code.com/codigo/web-cinematica) — qué problema resuelve, para quién y con qué está construido.
 
-*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com/es)*
+*Mindset & Code · asesoría fiscal y tecnológica · [mindset-code.com](https://mindset-code.com)*
